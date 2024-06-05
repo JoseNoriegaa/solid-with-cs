@@ -1,5 +1,10 @@
-﻿using SingleResponsibility;
+﻿using SingleResponsibility.Repositories;
+using SingleResponsibility.Helpers;
 
 StudentRepository studentRepository = new();
-studentRepository.Export();
+
+var students = studentRepository.GetAll();
+
+ExportHelper.ExportStudents(students);
+
 Console.WriteLine("Proceso Completado");
