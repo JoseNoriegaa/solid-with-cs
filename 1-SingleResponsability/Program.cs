@@ -5,6 +5,6 @@ StudentRepository studentRepository = new();
 
 var students = studentRepository.GetAll();
 
-ExportHelper.ExportStudents(students);
+ExportHelper.ExportCSV("Students", students);
 
 Console.WriteLine("Proceso Completado");
