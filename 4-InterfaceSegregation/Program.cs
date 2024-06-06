@@ -1,3 +1,3 @@
-﻿using InterfaceSegregation;
+﻿using InterfaceSegregation.Models;
 
 new Developer().Develop();
