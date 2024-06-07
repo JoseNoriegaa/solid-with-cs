@@ -2,9 +2,9 @@ using System.Collections.ObjectModel;
 
 namespace DependencyInversion
 {
-    public class StudentRepository
+    public class StudentRepository: IStudentRepository
     {
-        private static ObservableCollection<Student> collection;
+        private static ObservableCollection<Student>? collection;
 
         public StudentRepository()
         {
@@ -24,12 +24,19 @@ namespace DependencyInversion
 
         public IEnumerable<Student> GetAll()
         {
-            return collection;
+            return collection!;
         }
 
         public void Add(Student student)
         {
-            collection.Add(student);
+            collection!.Add(student);
         }
+    }
+
+    public interface IStudentRepository
+    {
+        public IEnumerable<Student> GetAll();
+        
+        public void Add(Student student);
     }
 }
