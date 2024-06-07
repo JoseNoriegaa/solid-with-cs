@@ -1,2 +1,6 @@
-# Principios SOLID en C# curso
-Para iniciar el curso debes usar el código de la rama master o de la rama 0-codigobase
+# S.O.L.I.D with C#
+A simple collection of C# applications that I used to apply the SOLID principles as part of a course.
+
+
+### Requirements
+- dotnet >= 8
